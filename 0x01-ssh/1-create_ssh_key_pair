@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Description: this line of code permits us to Create a private public set of pair keys under constraints that their name is holberton and their number of bits id 4096 and they are protected by the passphrase betty 
+
+ssh-keygen -t rsa -b 4096 -N betty -f holberton
