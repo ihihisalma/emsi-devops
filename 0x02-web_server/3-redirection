@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configuring nginx server so that /redirect_me is redirecting to another page
+GOOGLEPAGE="\\\tlocation /redirect_me {\n\t\t return 301 https://www.google.com/;\n\t}\n"
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo sed -i '0,/listen .*/s//listen 80 default_server;/' /etc/nginx/sites-available/default
+echo Holberton School > /var/www/html/index.nginx-debian.html
+sudo sed -i "30i $GOOGLEPAGE" /etc/nginx/sites-available/default
+sudo service nginx restart
