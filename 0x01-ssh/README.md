@@ -1,4 +1,4 @@
-0x01. SSH
+0x01. SSH \n
 This repository contains three files:
 +0-use_a_private_key
 Bash script to connect to my server using private key ~/.ssh/holberton with the user ubuntu
