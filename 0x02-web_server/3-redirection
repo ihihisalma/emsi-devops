@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configure nginx server so that /redirect_me is redirecting to another page
+# Configuring nginx server so that /redirect_me is redirecting to another page
 GOOGLEPAGE="\\\tlocation /redirect_me {\n\t\t return 301 https://www.google.com/;\n\t}\n"
 sudo apt-get update
 sudo apt-get -y install nginx
